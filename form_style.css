@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --success-color: #28a745;
+    --error-color: #dc3545;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    font-family: 'Lato', sans-serif;
+}
+
+.form h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#form-container {
+    background-color: rgba(255, 255, 255, 0.63);
+    width: 400px;
+    padding: 40px 50px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.4);
+}
+
+.form-control {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    position: relative;
+
+}
+
+.form-control input:focus {
+    outline: 0;
+    border-color: #777;
+}
+
+.form-control input {
+    border: 2px solid #f0f0f0;
+    display: block;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+    font-size: 14px;
+}
+
+.form-control label {
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-control small {
+    color: var(--error-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.form-control.success input {
+    border-color: var(--success-color);
+}
+
+.form-control.error input {
+    border-color: var(--error-color);
+}
+
+.form-control.error small {
+    visibility: visible;
+}
+
+.submit-button button {
+    background-color: teal;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border-radius: 3px;
+    border: none;
+    text-transform: uppercase;
+}
